@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Bankapi
+namespace Bankapi.Exceptions
 {
     [Serializable]
     public class ClientFactoryNotFoundException : Exception

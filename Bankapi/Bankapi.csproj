@@ -42,8 +42,8 @@
   <ItemGroup>
     <Compile Include="BankClient.cs" />
     <Compile Include="BankClientFactoryResolver.cs" />
-    <Compile Include="ClientFactoryNotFoundException.cs" />
     <Compile Include="Exceptions\AccountNotFoundException.cs" />
+    <Compile Include="Exceptions\ClientFactoryNotFoundException.cs" />
     <Compile Include="Exceptions\InvalidCredentialsException.cs" />
     <Compile Include="Exceptions\PasswordLengthException.cs" />
     <Compile Include="IBankClient.cs" />
