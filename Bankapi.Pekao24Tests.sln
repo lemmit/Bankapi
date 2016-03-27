@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bankapi.Pekao24Tests", "Bankapi.Pekao24Tests\Bankapi.Pekao24Tests.csproj", "{8559A19F-0913-430E-BF57-5DF6C133E6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bankapi.Pekao24", "Bankapi.Pekao24\Bankapi.Pekao24.csproj", "{79B2A59D-22CA-4480-8CD8-6C0E6F9DA40D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bankapi", "Bankapi\Bankapi.csproj", "{68362CB8-CC5E-47E9-A198-6B3D758FA724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bankapi.ConsoleSample", "Bankapi.ConsoleSample\Bankapi.ConsoleSample.csproj", "{F4D71197-EF0E-4BFC-A08B-1D213A8039D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bankapi.Autofac", "Bankapi.Autofac\Bankapi.Autofac.csproj", "{D4B56816-5F00-416D-B429-87A4727407A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApi.Pekao24IntegrationTests", "BankApi.Pekao24IntegrationTests\BankApi.Pekao24IntegrationTests.csproj", "{8A024B5F-4D7E-4DF8-B86E-D74F8DB20D1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8559A19F-0913-430E-BF57-5DF6C133E6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8559A19F-0913-430E-BF57-5DF6C133E6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8559A19F-0913-430E-BF57-5DF6C133E6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8559A19F-0913-430E-BF57-5DF6C133E6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B2A59D-22CA-4480-8CD8-6C0E6F9DA40D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B2A59D-22CA-4480-8CD8-6C0E6F9DA40D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B2A59D-22CA-4480-8CD8-6C0E6F9DA40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B2A59D-22CA-4480-8CD8-6C0E6F9DA40D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68362CB8-CC5E-47E9-A198-6B3D758FA724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68362CB8-CC5E-47E9-A198-6B3D758FA724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68362CB8-CC5E-47E9-A198-6B3D758FA724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68362CB8-CC5E-47E9-A198-6B3D758FA724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D71197-EF0E-4BFC-A08B-1D213A8039D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D71197-EF0E-4BFC-A08B-1D213A8039D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D71197-EF0E-4BFC-A08B-1D213A8039D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D71197-EF0E-4BFC-A08B-1D213A8039D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B56816-5F00-416D-B429-87A4727407A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B56816-5F00-416D-B429-87A4727407A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B56816-5F00-416D-B429-87A4727407A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B56816-5F00-416D-B429-87A4727407A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A024B5F-4D7E-4DF8-B86E-D74F8DB20D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A024B5F-4D7E-4DF8-B86E-D74F8DB20D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A024B5F-4D7E-4DF8-B86E-D74F8DB20D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A024B5F-4D7E-4DF8-B86E-D74F8DB20D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1844 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)https://www.pekao24.pl/MCP/ClientLogonWeb2.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl" class=" webkit chrome win js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pekao24 – bankowość elektroniczna</title>
+
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="" name="keywords">
+<meta content="" name="description">
+<meta content="pl" name="language">
+<meta content="noindex, nofollow" name="robots">
+<link media="all" type="text/css" rel="stylesheet" href="./afterSuccessfulLogin_files/style_red.css"><!--[if lte IE 6]>
+<link media="all" type="text/css" rel="stylesheet" href="/MCP/data/_css_red/ie6.css"/><![endif]--><!--[if lte IE 7]>
+<link media="all" type="text/css" rel="stylesheet" href="/MCP/data/_css_red/ie7.css"/><![endif]--><!--[if IE 8]>
+<link media="all" type="text/css" rel="stylesheet" href="/MCP/data/_css_red/ie8.css"/><![endif]-->
+<style type="text/css">@import url('/MCP/data/_css_red/new_contrast.css');</style>
+<link media="print" type="text/css" rel="stylesheet" href="./afterSuccessfulLogin_files/print.css">
+<script type="text/javascript" src="./afterSuccessfulLogin_files/jquery-1.3.2.min.js">&nbsp;</script><style type="text/css"></style>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/jquery-impromptu.2.7.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/scripts.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/InitScripts.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/jquery.json-1.3.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/errtip.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/css_browser_selector.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/rsa.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/json2.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/thickbox20160224.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/jScrollPane.js">&nbsp;</script>
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+				errtip.init(".questionMark");				
+				//FDS - set element parDP (if exists)
+				if ( $("#parDP").length ) 
+				{
+					$('#parDP').val(add_deviceprint());
+				}
+				if ( $("#parDE").length ){
+					var dom_data_collection = new DomDataCollection();
+					dom_data_collection.startInspection();
+					$('#parDE').val(dom_data_collection.domDataAsJSON());
+
+			    }
+				if ( $("#parJE").length ){
+					if(window.addEventListener) {
+						window.addEventListener('load',UIEventCollector.initEventCollection, false);
+					} else if(window.attachEvent) {
+						window.attachEvent('onload',UIEventCollector.initEventCollection);
+					} else {
+						window.onload = UIEventCollector.initEventCollection;
+					}
+				}
+				//FDS end
+			});
+			</script>
+<script type="text/javascript">
+		
+		jQuery(document).ready(function(){
+		
+		var left=$("div #left");
+		var right=$("div #right");
+
+		$("div .boxOfferWrap").each(function(){
+		
+			var msgPositionId = $(this).attr("data-posid");
+			
+			if(msgPositionId && msgPositionId.indexOf("LPPB") >= 0 && msgPositionId.indexOf("LPPB_PBSRV_WU") < 0 && msgPositionId.indexOf("LPPB_PBSRV_I") < 0 && msgPositionId.indexOf("LPPB_PBSRV_R") < 0 && msgPositionId.indexOf("LPPB_PBSRV_D") < 0){			
+
+				
+				if(left.outerHeight()+14 > right.outerHeight() ){
+					$(this).css("position","absolute");
+					$(this).css("bottom",0);
+					$(this).css("margin-bottom",27);					
+				}
+					
+			}
+
+			$(this).children("div").each(function(){
+				
+				var mcid = $(this).attr("data-mcid");
+				var cid = $(this).attr("data-cid");
+				
+				$(this).find("a").each(function(){							
+					$(this).click(function() {					
+				     	updateMarketingContentStats(mcid, cid, msgPositionId);
+				   	});			
+				}); 
+			 });			
+		});		
+
+		
+		}		
+		);
+		
+		</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/ARCP_Utilities_20081007.js">&nbsp;</script>
+<script type="text/javascript"><!--			
+            var sSessionId = '0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w';
+            var sEngineId = '1';
+			var HttpRequestPath = 'https://www.pekao24.pl:443';
+			var ServerPath = '/MCP';
+			var sLang = 'PL';		
+			var pageScriptsSettings = {'trows':true,'checkgroup':true,'calendar':true, 'checkbox':true, 'checkcheckbox':true, 'select':true, 'tooltip':true};
+			var isMakler = false;
+            var numError = 'W tym polu można wpisywać tylko liczby!';
+            var lblChar = 'Znak';
+            var lblNotAllowed = 'jest niedozwolony!';
+            var MainPageCollapseText = "zwiń";
+            var MainPageExpandText = "rozwiń";
+            var MainPageIfTableDeleteQuestion = "Czy na pewno chcesz usunąć tabelkę ze strony głównej?"
+            var YesText = "Tak";
+            var CancelText = "Anuluj";
+            var BackText = "Cofnij";
+            var ConfirmText = "Zatwierdź";
+            var SpaceCharText = "spacja";
+			var MessageText = "";
+			/* K2: Słowniki - Uwaga! Po naciśnięciu ANULUJ wprowadzone dane zostaną utracone. Aby je zachować i dokończyć wypełnianie wniosku w terminie p&oacute;źniejszym naciśnij TAK. - key('dictLBL','l_confirm_application_exit') */
+			var confirmApplicationExit = "";
+            
+			
+			function isAlive() {
+				BrowserDetect.init();
+			}
+			
+
+            function errMessage(e) {				
+				
+            return;
+            }
+
+            
+			function onload_handler(e) {
+				// isAlive();
+				errMessage(e);
+			}
+
+			window.onload = onload_handler;
+
+			function mJump(page,copyAcc,separator) {
+				var mJumpSend = function(page,copyAcc,separator) {
+					var oForm = document.forms.frmJump;
+					
+					
+					if (page.indexOf('/')==0) page = page.substr(1);			
+					oForm.action=page+separator+"subpage=932092464ID";
+					
+					oForm.parCopyAccount.value=copyAcc;
+					oForm.submit();
+					return false;
+				};
+
+				if(arguments.length < 3){ 
+					separator = "?";
+				}
+				
+				
+				if (typeof onBeforeUnload === 'function') {
+					ConfLayer(confirmApplicationExit, function(){ onBeforeUnload(mJumpSend, [page,copyAcc,separator]); }, function() { mJumpSend(page,copyAcc,separator); } );
+				} else {
+					mJumpSend(page,copyAcc,separator);
+				}
+				
+			}	
+			
+			
+			function submitPost(url, params, openNewWindow) {
+				var form = prepareForm(document.forms.frmPostSend, url, params);
+				if(openNewWindow){
+					$(form).attr('target','_blank');
+				}
+				$(form).submit();
+				return false;
+			}
+
+			function openPopup(url, params, name, specs) {
+				var popup = window.open('', name, specs);
+				var form = prepareForm(document.forms.frmPostSend, url, params);
+				if (!popup.opener) {
+					popup.opener = self;
+				}
+				$(form).attr('target', name);
+				$(form).submit();
+				popup.focus();
+				return false;
+			}
+
+			function prepareForm(form, url, params) {
+				$(form).attr('method', 'post');
+				$(form).attr('action', url);
+				var addParam = function(paramName, paramValue){
+					$(form).find('input[name = "'+paramName+'"] ').remove();
+					$(form).append('<input value="' + paramValue + '" name="' + paramName + '" type="hidden"/>');
+				};
+				for(var key in params){
+					addParam(key, params[key]);
+				}
+				return form;
+			}
+							
+			function mJumpGet(page,copyAcc,separator) {
+				var mJumpGetSend = function(page,copyAcc,separator) {
+					
+					var oForm = document.forms.frmJump;
+					
+					if (page.indexOf('/')==0) page = page.substr(1);			
+					oForm.action=page+separator+"&"+"subpage=932092464ID";
+					oForm.parCopyAccount.value=copyAcc;
+					oForm.submit();
+					return false;
+				};
+
+				if(arguments.length < 3){ //test2
+					separator = "?";
+				}
+			
+				if (typeof onBeforeUnload === 'function') {
+					ConfLayer(confirmApplicationExit, function(){ onBeforeUnload(mJumpGetSend, [page,copyAcc,separator]); }, function() { mJumpGetSend(page,copyAcc,separator); } );
+				} else {
+					mJumpGetSend(page,copyAcc,separator);
+				}
+            }
+			
+			
+			var iShortcutsNumber = 1;
+			function addShortcut(iLinkId) {
+				var frmSC = document.forms.frmShortcutForm;
+				if (iShortcutsNumber  < 6) {
+					if ($('#shortcuts #shortcut_'+iLinkId).length==0){
+						frmSC.parSCAction.value="ADD";
+						frmSC.parSCShortcut.value=iLinkId;
+						frmSC.submit();
+					}
+					else {
+						ShowServerMsg("Wybrany skrót znajduje się już na liście!",true);
+					}					
+				} else {
+					ShowServerMsg("Osobiste menu klienta może zawierać maksymalnie sześć skrótów",true);
+				}
+			}		
+
+			function MM_openBrWindow(theURL,winName,features) {
+				window.open(theURL,winName,features);
+			}
+
+            function OpenWndAS(thePage,pars,winName,features) {
+            var Wnd;
+            Wnd = window.open('https://www.pekao24.pl:443/MCP'+thePage+'?BV_SessionID=0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w'+'&'+'BV_EngineID=1'+'&'+'subpage=932092464ID'+pars,winName,features);
+			Wnd.focus();
+			}
+
+            --></script>
+<script type="text/javascript">
+			function ustawCookie(nazwa,wartosc,wygasnie) {
+				document.cookie = nazwa+escape(wartosc)+ ((wygasnie == null) ? "" : ("; expires=" +wygasnie.toGMTString()))
+			}
+	
+			function rejestruj(nazwa,wartosc) {
+				var dzisiaj = new Date()
+				var wygasnie = new Date()
+				wygasnie.setTime(dzisiaj.getTime() + 1000*60*60*24*31)
+				ustawCookie(nazwa,wartosc,wygasnie)
+			}
+	
+			function pobierzCookie(nazwa) {
+				var szukaj = nazwa;
+				if(document.cookie.length > 0) {
+					offset = document.cookie.indexOf(szukaj) ;	
+					if(offset != -1) {
+						offset +=szukaj.length;
+						koniec = document.cookie.indexOf(";",offset);	
+						if(koniec == -1)
+							koniec = document.cookie.length;	
+						return unescape(document.cookie.substring(offset,koniec));
+					}
+				}
+			}
+		</script>
+<script type="text/javascript">
+					$(document).ready(function(){
+						var liW = 0;
+						$("#header .menu li").each(function(){
+							liW += $(this).outerWidth();
+						});
+						var menuW = $("#header .menu").width();
+					});
+				</script>
+</head>
+<body id="PL" class="bank">
+<script type="text/javascript">
+				var time = '15';
+				var lastSessionRefreshTime = 0;
+				var actualTime = 0;
+				var assumeRefresherIsDeadTime = 3000;
+                var sessionActiveTxt = '';
+                var endSession = '';
+                
+				var checkTimeOut = 'N';
+				var tmpTime = time;
+				var second = 59;
+				var typeSignMinute = "";
+				var typeSignSecond = "";
+				
+				
+				var sessionOut = 'Sesja wygasła'; 
+				
+				
+                
+				function startTime(last){
+					actualTime = (new Date()).getTime();
+					
+                    
+					if(typeof pobierzCookie == 'function') {
+						if((actualTime - lastSessionRefreshTime) < assumeRefresherIsDeadTime || pobierzCookie('sessionActive') == 1) {
+                                sessionActiveTxt = 'Sesja aktywna';
+                                $("#counter .count").html(sessionActiveTxt);
+                                setTimeout('startTime(true)',1000);
+                                return true;
+                            
+						}
+					}
+                    
+					
+					if(last == true) second--;
+					else time--;
+					
+					switch(time) {
+						case 1: typeSignMinute = 'minuta'; 
+						break;
+						case 2: typeSignMinute = 'minuty'; 
+						break;
+						case 3: typeSignMinute = 'minuty'; 
+						break;
+						case 4: typeSignMinute = 'minuty'; 
+						break;
+						default: typeSignMinute = 'minut'; 
+						break;
+					}
+					
+					switch(second) {
+						case 1: typeSignSecond = 'sekunda'; 
+						break;
+						case 2: typeSignSecond = 'sekundy'; 
+						break;
+						case 3: typeSignSecond = 'sekundy'; 
+						break;
+						case 4: typeSignSecond = 'sekundy'; 
+						break;
+						default: typeSignSecond = 'sekund'; 
+						break;
+					}
+					
+					if(time <= 0){
+						if(second <= 0){
+							$("#counter").addClass("red");
+							$("#counter .count").html(sessionOut);
+							return false;
+						}
+						else{
+							$("#counter").addClass("red");
+                            $("#counter .count").html(second+" "+typeSignSecond);
+                            
+							setTimeout('startTime(true)',1000)
+						}
+					}
+					else{
+                        $("#counter .count").html(time+" "+typeSignMinute);
+                        
+						
+						if(tmpTime == (time + 1)) {setTimeout('startTime(false)',65000);}
+						else {setTimeout('startTime(false)',60000);}
+					}
+					
+				}
+			$(document).ready(function(){
+				if(checkTimeOut == 'Y'){
+					function checkTime(i){
+						if (i < 10){
+								i="0" + i;
+						}
+						return i;
+					}
+					$("#counter span").show();
+					startTime(false);
+				}
+					
+			});
+		</script>
+<form accept-charset="utf-8" name="frmShortcutForm" method="post" action="https://www.pekao24.pl/MCP/ClientHomePage.htm?subpage=932092464ID">
+<input value="" name="parSCShortcut" type="hidden">
+<input value="" name="parSCAction" type="hidden">
+<input value="0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w" name="BV_SessionID" type="hidden">
+<input value="1" name="BV_EngineID" type="hidden">
+<input value="" name="parSecurityGroup" type="hidden">
+<input value="Ts[dws" name="parSyncToken" type="hidden">
+<input value="PINVerification_WE.1.0" name="parPI" type="hidden">
+<input value="{&quot;functions&quot;:{&quot;names&quot;:[&quot;$&quot;,&quot;add&quot;,&quot;blackberrylocationcollector&quot;,&quot;contacttabclick&quot;,&quot;delete&quot;,&quot;dictionary&quot;,&quot;domdatacollection&quot;,&quot;fingerprint&quot;,&quot;html5locationcollector&quot;,&quot;hashtable&quot;,&quot;helpaccordion&quot;,&quot;hideerror&quot;,&quot;ie_fingerprint&quot;,&quot;inithelpaccordion&quot;,&quot;initscreenkeyboard&quot;,&quot;interactionelement&quot;,&quot;lookup&quot;,&quot;mozilla_fingerprint&quot;,&quot;onclientclose&quot;,&quot;onclientshow&quot;,&quot;opera_fingerprint&quot;,&quot;screenkeyboardlogin&quot;,&quot;showerror&quot;,&quot;timer&quot;,&quot;uielementlist&quot;,&quot;uievent&quot;,&quot;activexdetect&quot;,&quot;addeventlistener&quot;,&quot;add_deviceprint&quot;,&quot;alert&quot;,&quot;allowedkey&quot;,&quot;atob&quot;,&quot;blur&quot;,&quot;btoa&quot;,&quot;callpopup&quot;,&quot;cancelanimationframe&quot;],&quot;excluded&quot;:{&quot;size&quot;:0,&quot;count&quot;:0},&quot;truncated&quot;:true},&quot;inputs&quot;:[&quot;bv_engineid&quot;,&quot;bv_engineid&quot;,&quot;bv_sessionid&quot;,&quot;bv_sessionid&quot;,&quot;no_name&quot;,&quot;f0&quot;,&quot;f1&quot;,&quot;f10&quot;,&quot;f11&quot;,&quot;f12&quot;,&quot;f13&quot;,&quot;f14&quot;,&quot;f15&quot;,&quot;f2&quot;,&quot;f3&quot;,&quot;f4&quot;,&quot;f5&quot;,&quot;f6&quot;,&quot;f7&quot;,&quot;f8&quot;,&quot;f9&quot;,&quot;fsubmit&quot;,&quot;parbrowsername&quot;,&quot;parde&quot;,&quot;pardp&quot;,&quot;parlanguage&quot;,&quot;parpi&quot;,&quot;parpassword&quot;,&quot;parsynctoken&quot;,&quot;parsynctoken&quot;,&quot;parusername&quot;,&quot;parusername&quot;],&quot;iframes&quot;:[],&quot;scripts&quot;:[6,6,6,6,6,6,6,6,6,6,6,3007,6,6,505,933,177,151,6,6],&quot;collection_status&quot;:0}" name="parDE" type="hidden">
+<input value="1458936635-5" name="parRefreshRates" type="hidden">
+<input value="version=3.4.1.0_1&amp;pm_fpua=mozilla/5.0 (windows nt 10.0; wow64) applewebkit/537.36 (khtml, like gecko) chrome/49.0.2623.87 safari/537.36|5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36|Win32&amp;pm_fpsc=24|1366|768|728&amp;pm_fpsw=&amp;pm_fptz=1&amp;pm_fpln=lang=pl|syslang=|userlang=&amp;pm_fpjv=0&amp;pm_fpco=1&amp;pm_fpasw=widevinecdmadapter|pepflashplayer|mhjfbmdgcfjbbpaeojofohoefgiehjai|internal-nacl-plugin|internal-pdf-viewer&amp;pm_fpan=Netscape&amp;pm_fpacn=Mozilla&amp;pm_fpol=true&amp;pm_fposp=&amp;pm_fpup=&amp;pm_fpsaw=1366&amp;pm_fpspd=24&amp;pm_fpsbd=&amp;pm_fpsdx=&amp;pm_fpsdy=&amp;pm_fpslx=&amp;pm_fpsly=&amp;pm_fpsfse=&amp;pm_fpsui=&amp;pm_os=Windows&amp;pm_brmjv=49&amp;pm_br=Chrome&amp;pm_inpt=&amp;pm_expt=" name="parDP" type="hidden">
+<input value="123123123" name="parUsername" type="hidden">
+<input value="Y" name="afterLogon" type="hidden">
+</form>
+<form accept-charset="utf-8" name="frmJump" method="post" action="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">
+<input value="0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w" name="BV_SessionID" type="hidden">
+<input value="1" name="BV_EngineID" type="hidden">
+<input value="0" name="parCopyAccount" type="hidden">
+<input type="hidden" name="parRefreshRates" value="1458936635-5"></form>
+<form id="frmPostSend" accept-charset="utf-8" name="frmPostSend" method="post" action="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">
+<input value="0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w" name="BV_SessionID" type="hidden">
+<input value="1" name="BV_EngineID" type="hidden">
+<input type="hidden" name="parRefreshRates" value="1458936635-5"></form>
+<div id="header" class="pl">
+<h1 id="logoPekao24">
+<span>Pekao24 – bankowość elektroniczna</span>
+<a accesskey="1" title="Pekao24 – bankowość elektroniczna - Strona główna" href="javascript:mJump(&#39;ClientHomePage.htm&#39;,1,&#39;?&#39;);">
+<img alt="Pekao24 – bankowość elektroniczna - Strona główna" src="./afterSuccessfulLogin_files/logo_pekao24.gif">
+</a>
+</h1>
+<ul class="menu">
+<li class="first active activeFirst  HomePageClass">
+<a onclick="mJump(&#39;ClientHomePage.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" title="Strona główna" style="padding-left: 0px; padding-right: 0px;">
+<span>Strona główna</span>
+</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;ListOfCurrentAccounts.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Przelewy</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;ListOfTermDeposits.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Lokaty</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;ListOfFundsMFSP_P24.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Inwestycje</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;ListOfCards.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Karty</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;ListOfLoans.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Kredyty</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;Services.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Usługi</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;ApplicationList.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding:11px 23px 10px">Wnioski</a>
+</li>
+<li class="null  noBorderRight">
+<a onclick="mJump(&#39;ListOfProducts.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" style="padding: 11px 24px 10px 23px;">Oferta dla Ciebie</a>
+</li>
+</ul>
+<ul class="menuIcon">
+<li class="mail MailboxClass">
+<a onclick="javascript:mJump(&#39;MailboxO.htm&#39;,0,&#39;?&#39;); return false;" id="mailID" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#mail">Poczta</a>
+</li>
+<li class="settings SettingsClass">
+<a onclick="javascript:mJump(&#39;Settings.htm&#39;,0,&#39;?&#39;); return false;" id="settingsID" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#settings">Ustawienia</a>
+</li>
+<li class="shortcuts ShortcutClass">
+<a onclick="javascript:mJump(&#39;ShortcutManagement.htm&#39;,0,&#39;?&#39;); return false;" id="shortcutsID" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#shortcuts">Moje skróty</a>
+</li>
+<li class="langIcon">
+<a class="lang langEn" title="English version" href="javascript:setLanguage();">&nbsp;
+                               </a>
+</li>
+</ul>
+<div id="mail" class="quickMenu">
+<div class="relative">
+<div class="shadow">
+<ul class="shortcut">
+<li class="null ">
+<a onclick="mJump(&#39;MailboxO.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">Przejdź do skrzynki odbiorczej</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;MailboxN.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">Napisz wiadomość</a>
+</li>
+<li class="null ">
+<a onclick="mJumpGet(&#39;Mailbox.htm&#39;,1,&#39;?parD=W&#39;);" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">Ekrany powitalne</a>
+</li>
+</ul>
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+</div>
+<div id="settings" class="quickMenu">
+<div class="relative">
+<div class="shadow">
+<ul class="shortcut">
+<li class="null ">
+<a onclick="mJump(&#39;AccessCodesManagement.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">Hasło i PIN</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;AlertMessages.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">Powiadomienia SMS</a>
+</li>
+<li class="null ">
+<a onclick="mJump(&#39;LimitsManagement.htm&#39;,1,&#39;?&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">Limity transakcyjne</a>
+</li>
+<li class="more">
+<a href="javascript:mJump(&#39;Settings.htm&#39;,0,&#39;?&#39;)" title="Więcej">Więcej</a>
+</li>
+</ul>
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+</div>
+<div id="shortcuts" class="quickMenu">
+<div class="relative">
+<div class="shadow">
+<ul class="shortcut">
+<li id="shortcut_37">
+<a title="Przelew jednorazowy" href="javascript:mJump(&#39;MTNotPredefinedAccount.htm&#39;,1,&#39;?&#39;)">Przelew jednorazowy</a>
+</li>
+<li class="more">
+<a href="javascript:mJump(&#39;ShortcutManagement.htm&#39;,0,&#39;?&#39;);" title="Więcej">Więcej</a>
+</li>
+</ul>
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+<ul class="more">
+<li>
+<a onclick="addShortcut(&#39;30&#39;);return false;" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#addShortcut">Dodaj skrót do tej strony</a>
+</li>
+<li>
+<a href="javascript:mJump(&#39;ShortcutManagement.htm&#39;,0,&#39;?&#39;);">Zarządzaj skrótami</a>
+</li>
+</ul>
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+</div>
+<ul class="tabs">
+<li>
+<a title="Pekao24Makler" href="javascript:mJump(&#39;MAKAccountSelection.htm&#39;,1,&#39;?&#39;);">Usługi Maklerskie</a>
+</li>
+<li>
+<a title="PeoPay" href="javascript:mJumpGet(&#39;PeoPayHomePage.htm&#39;,1,&#39;?&#39;);">PeoPay</a>
+</li>
+<li class="selected">
+<a title="Pekao24" href="javascript:mJump(&#39;ClientHomePage.htm&#39;,1,&#39;?&#39;);">Pekao24</a>
+</li>
+</ul>
+</div>
+<div id="function">
+<div class="name">
+<em>
+<a href="javascript:mJump(&#39;PersonalDataManagement.htm&#39;,1,&#39;?&#39;);">JAN KOWALSKI</a>
+</em>
+<a class="btnBlue logout" accesskey="x" href="javascript:mJump(&#39;Logout.htm&#39;,0, &#39;?&#39;)" title="Wyloguj">
+<span>Wyloguj</span>
+</a>
+</div>
+<div class="registerInfo">
+<div class="floatLeft marginRight5">Nr klienta:
+<span>123123123</span>
+<span class="pipe">|</span>
+<a style="color:#ff0000;" href="javascript:mJump(&#39;EventRegisterViewer.htm&#39;,1,&#39;?cmdAction=SearchEvents&amp;rgSearchType=1&amp;sEventType=1&amp;sOperationType=6&amp;&#39;);" class="more">
+							
+							&nbsp;Ostatnie nieudane logowanie:&nbsp;25/03/2016 21:17</a>
+</div>
+</div>
+</div>
+<div id="contentForBgAdvLevel1">
+<div id="contentForBgAdvLevel2">
+<div id="contentForBgAdvLevel3">
+<div id="content">
+<div id="left">
+<script type="text/javascript">
+							    	  $(function(){
+							          		$(".personalAdviser h2").unbind('click').click(function() {
+                          					if($("#personalAdviser").hasClass("close"))
+							              		$("#personalAdviser").removeClass("close");
+				                          	else
+				                           		 $("#personalAdviser").addClass("close");
+							          });
+							        });
+							    	</script>
+<script type="text/javascript">
+									  $(function(){
+										$(".personalAdviser .email .iconEmial").mouseenter(function() {
+											$(".personalAdviser .email .iconEmial span").show();
+										}).mouseleave(function(){
+											$(".personalAdviser .email .iconEmial span").hide();
+										});
+									  });
+									</script>
+<div data-posid="LHPB_SLEA" class="boxOfferWrap">
+<div data-cid="22545" data-mcid="23762" class="boxLeftMenu">
+<!--LHPB_SLEA,msgId=23762--><a href="javascript:mJump(&#39;ApplicationCreator.htm&#39;,1,&#39;?&#39;);">  <img alt="" width="182" height="43" src="./afterSuccessfulLogin_files/czerwony_pozyczka_ekspresowa.png"></a></div>
+<div data-cid="22577" data-mcid="19857" class="boxLeftMenu">
+<!--LHPB_SLEA,msgId=19857--><a href="javascript:mJump(&#39;PromotionForm.htm&#39;,1,&#39;?&#39;);"><img width="182" height="43" src="./afterSuccessfulLogin_files/niebieski-formularz-kontaktu.png" alt=""> &nbsp;</a></div>
+<div data-cid="24480" data-mcid="19858" class="boxLeftMenu">
+<!--LHPB_SLEA,msgId=19858--><a href="javascript:mJump(&#39;MobileAppDeviceManagement.htm&#39;,1,&#39;?&#39;);"><img alt="" width="182" height="43" src="./afterSuccessfulLogin_files/zielony_aplikacja_mobilna_pekao24.png"> &nbsp;</a></div>
+<div data-cid="22552" data-mcid="23763" class="boxLeftMenu">
+<!--LHPB_SLEA,msgId=23763--><a target="_self" href="javascript:submitPost(&#39;PeoPayHomePage.htm&#39;);">  <img alt="" width="182" height="43" src="./afterSuccessfulLogin_files/platnosci_mobilne_peopay_szary.png"></a></div>
+<div data-cid="22579" data-mcid="17414" class="boxLeftMenu">
+<!--LHPB_SLEA,msgId=17414--><a href="javascript:mJump(&#39;SpecialOffer.htm&#39;,1,&#39;?&#39;);"><img width="182" height="43" src="./afterSuccessfulLogin_files/szary_galeria_rabatow.png" alt=""></a></div>
+</div>
+<div class="boxInfo antivirus">
+<h3 style="" class="title_small">
+<a class="ext" style="color:#666666;" href="https://www.vprotection.pl/start.html?time=1458937041861&amp;hash=f1d932dd589c2ac3d94969d7685de7e9&amp;chash=Pq_A738mZHvNWXGdzhog1hQxP4R2nSv3AjxAnGhGImGYkfG6h0ekDgpAzhPZOl-6">Program<br>antywirusowy</a>
+</h3>
+</div>
+<div class="boxInfo safety">
+<h3 class="title_small">
+<a title="Informacje i ustawienia" href="javascript:mJump(&#39;SecurityDocuments.htm&#39;,1,&#39;?&#39;);">Bezpieczeństwo</a>
+</h3>
+</div>
+<div class="boxInfo download">
+<h3 class="title_small">Pobierz</h3>
+<ul>
+<li>
+<a title="Wykaz funkcji serwisów" target="_blank" href="https://www.pekao24.pl/MCP/Share/DOWNLOAD/Wykaz_funkcji_serwisow_Pekao24.pdf">Wykaz funkcji serwisów</a>
+</li>
+<li>
+<a title="Przewodnik po Pekao24" target="_blank" href="https://www.pekao24.pl/MCP/Share/DOWNLOAD/Przewodnik_po_Pekao24.pdf">Przewodnik po Pekao24</a>
+</li>
+<li>
+<a title="Regulaminy i dokumenty" href="javascript:mJump(&#39;AppDoc.htm&#39;,1,&#39;?parDocType=D&amp;&#39;);">Regulaminy i dokumenty</a>
+</li>
+<li>
+<a title="Biuletyny bezpieczeństwa" href="javascript:mJump(&#39;AppDoc.htm&#39;,1,&#39;?parDocType=B&amp;&#39;);">Biuletyny bezpieczeństwa</a>
+</li>
+<li>
+<a title="Aplikacja mobilna - instrukcje" href="javascript:mJump(&#39;AppDoc.htm&#39;,1,&#39;?parDocType=D&amp;&#39;);">Aplikacja mobilna - instrukcje</a>
+</li>
+</ul>
+</div>
+<div class="boxInfo help">
+<div class="top">
+<h2 style="cursor:pointer; font-weight: normal;" onclick="mJump(&#39;Help.htm&#39;,1,&#39;?&#39;)" class="title_big">Pomoc</h2>
+</div>
+<p>Zapoznaj się z najważniejszymi tematami pomocy:</p>
+<ul>
+<li>
+<a title="Personalizacja strony głównej" href="javascript:mJump(&#39;Help.htm&#39;,&#39;1&#39;,&#39;?page=HomePagePersonalization&amp;&#39;)">Personalizacja strony głównej</a>
+</li>
+<li>
+<a title="Moje skróty" href="javascript:mJump(&#39;Help.htm&#39;,&#39;1&#39;,&#39;?page=MyShortcuts&amp;&#39;)">Moje skróty</a>
+</li>
+<li>
+<a title="Rejestr zdarzeń" href="javascript:mJump(&#39;Help.htm&#39;,&#39;1&#39;,&#39;?page=EventRegister&amp;&#39;)">Rejestr zdarzeń</a>
+</li>
+</ul>
+<div class="bottom">&nbsp;</div>
+</div>&nbsp;</div>
+<div id="right">
+<div class="breadcrumb">
+<a title="Strona główna" href="javascript:mJump(&#39;ClientHomePage.htm&#39;,&#39;0&#39;,&#39;?&#39;);">Strona główna</a>
+</div>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/MainPageBoxes.js">&nbsp;</script>
+<script type="text/javascript" src="./afterSuccessfulLogin_files/thick1x.min.js">&nbsp;</script>
+<script type="text/javascript">
+	
+			var bvSessionID = '0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w';
+			var bvEngineID = '1';
+			var homePageSettings = '{"blocks": [{"id": "bRecurentLimits", "collapsed": false, "subblocks": [{"id": "sbRecurentLimits", "hide": true, "collapsed": false}]}, {"id": "bDefLimits", "collapsed": false, "subblocks": [{"id": "sbDefLimits", "hide": true, "collapsed": false}]}, {"id": "bPredefindedLimits", "collapsed": false, "subblocks": [{"id": "sbPredefindedLimits", "hide": true, "collapsed": false}]}, {"id": "bWaitingLimits", "collapsed": false, "subblocks": [{"id": "sbWaitingLimits", "hide": true, "collapsed": false}]}, {"id": "bAssetsLiabilities", "collapsed": false, "subblocks": [{"id": "sbAssetsLiabilities", "hide": true, "collapsed": false}]}, {"id": "bAssets", "collapsed": false, "subblocks": [{"id": "sbAccounts", "hide": false, "collapsed": false}, {"id": "sbDeposits", "hide": false, "collapsed": false}, {"id": "sbFunds", "hide": false, "collapsed": false}]}, {"id": "bCredits", "collapsed": false, "subblocks": [{"id": "sbCreditAccounts", "hide": false, "collapsed": false}, {"id": "sbCredits", "hide": false, "collapsed": false}]}, {"id": "bMakler", "collapsed": false, "subblocks": [{"id": "sbMakler1", "hide": false, "collapsed": false}, {"id": "sbMakler2", "hide": false, "collapsed": true}]}, {"id": "bLimits", "collapsed": false, "subblocks": [{"id": "sbLimits", "hide": false, "collapsed": false}]}], "specialBlocks": {"id": "personalAdviser", "collapsed": false}}';
+			pageScriptsSettings = {'trows':true,'checkgroup':false,'calendar':false, 'checkbox':false, 'checkcheckbox':false, 'select':false, 'tooltip':true};
+			var oForm = document.forms[""];
+			
+			function ReadDefaultBlocksSettings() {
+				return '{"blocks": [{"id": "bAssets", "collapsed": false, "subblocks": [{"id": "sbAccounts", "hide": false, "collapsed": false}, {"id": "sbDeposits", "hide": false, "collapsed": false}, {"id": "sbFunds", "hide": false, "collapsed": false}, {"id": "sbOfe", "hide": false, "collapsed": false}]}, {"id": "bCredits", "collapsed": false, "subblocks": [{"id": "sbCreditAccounts", "hide": false, "collapsed": false}, {"id": "sbCredits", "hide": false, "collapsed": false}]}, {"id": "bMakler", "collapsed": false, "subblocks": [{"id": "sbMakler1", "hide": true, "collapsed": false}, {"id": "sbMakler2", "hide": true, "collapsed": false}]}, {"id": "bLimits", "collapsed": false, "subblocks": [{"id": "sbLimits", "hide": true, "collapsed": false}]}, {"id": "bRecurentLimits", "collapsed": false, "subblocks": [{"id": "sbRecurentLimits", "hide": true, "collapsed": false}]}, {"id": "bDefLimits", "collapsed": false, "subblocks": [{"id": "sbDefLimits", "hide": true, "collapsed": false}]}, {"id": "bPredefindedLimits", "collapsed": false, "subblocks": [{"id": "sbPredefindedLimits", "hide": true, "collapsed": false}]}, {"id": "bWaitingLimits", "collapsed": false, "subblocks": [{"id": "sbWaitingLimits", "hide": true, "collapsed": false}]}]}, {"id": "bAssetsLiabilities", "collapsed": false, "subblocks": [{"id": "sbAssetsLiabilities", "hide": false, "collapsed": false}]}],"specialBlocks" : {"id": "personalAdviser","collapsed": false}}';
+			}
+			var bSett = $.evalJSON(homePageSettings);
+		     if(bSett.specialBlocks != undefined){
+		        if(bSett.specialBlocks.collapsed)
+		          $("#personalAdviser").addClass("close");
+		        else
+		          $("#personalAdviser").removeClass("close");
+		      }
+
+			
+				
+					$(document).ready(function() {
+						InitMainPageBoxes("sortable","up","down","active","tableItem","up2","down2","delete","box_middle","box_bottom","content","bottom","top");
+						$('a').click(function(){SaveHomePageSettings();});
+						
+						if (homePageSettings=='') {
+						homePageSettings = $.evalJSON(ReadDefaultBlocksSettings());
+						}
+						$(document).ready(function (){
+						boxes.InitView(homePageSettings);
+						}
+						);
+					});
+				
+			
+		
+			var iRowNum=1;
+			var iCardGroup = 0;
+			
+			
+			function goToIkzeHistory(isIkzeFlexible, tfiId, registerNumber){
+				var sessionId = '0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w';
+				var engineId = '1';
+				
+				submitPost('OperationHistory.htm', { 'BV_SessionID':sessionId, 'BV_EngineID':engineId, 'parRegularProgram':'PROGRAM_IKZE', 'ikzeFlexible':isIkzeFlexible, 'parPassedTfi':tfiId, 'selectedTfi':tfiId, 'parPassedFund':registerNumber, 'registerNumber':registerNumber });
+			}
+			
+		</script>
+<script type="text/javascript">
+				function bilans(){
+					$(".slideTDNew a.open1").toggle(function(){						
+						$(this).parent().parent().parent().children().next().css("font-weight","bold");
+						var tmp = $(this).attr("rel");
+						$(".showHide1_"+tmp).show();
+						$(this).children().attr("src","/MCP/data/_img_red/_layout/bg_arrow_top.gif");
+						return false;
+					},
+					function(){
+						$(this).parent().parent().parent().children().next().css("font-weight","normal");
+						var tmp = $(this).attr("rel");
+						$(".showHide1_"+tmp).hide();
+						$(this).children().attr("src","/MCP/data/_img_red/_layout/bg_arrow_bottom.gif");
+						return false;
+					});
+					$(".slideTDNew a.open2").toggle(function(){
+						$(this).parent().parent().parent().children().next().css("font-weight","bold");
+						var tmp = $(this).attr("rel");
+						$(".showHide2_"+tmp).show();
+						$(this).children().attr("src","/MCP/data/_img_red/_layout/bg_arrow_top.gif");
+						return false;
+					},
+					function(){
+						$(this).parent().parent().parent().children().next().css("font-weight","normal");
+						var tmp = $(this).attr("rel");
+						$(".showHide2_"+tmp).hide();
+						$(this).children().attr("src","/MCP/data/_img_red/_layout/bg_arrow_bottom.gif");
+						return false;
+					});
+				}
+				$(document).ready(function (){
+				bilans();
+				}
+				);				
+		</script>
+<script type="text/javascript">
+
+			$(document).ready(function(){
+				var mode = GetUrlParam('mode');
+				var id = GetUrlParam('id');
+				if (mode!='') {
+					$('#'+mode+id).click();
+				}
+				
+				
+			})
+
+			function submitFormDefined(sPage,sAction) {
+				var oForm = document.forms.sPAForm;
+				oForm.cmdAction.value = sAction;
+				oForm.action = sPage;
+				oForm.submit();
+			}
+
+			function Execute(transfer_type) {
+				var oForm = document.forms.sPAForm;
+				oForm.parRadio.value = transfer_type;
+				submitFormDefined('MTPredefinedAccount.htm','');
+			}
+
+			function Delete(name,transfer_type) {
+				var oForm = document.forms.sPAForm;
+				oForm.parRadio.value = transfer_type;
+				
+				var msg = 'Czy napewno chcesz usunąć przelew zdefiniowany';
+				ConfLayer(msg+" '" + name + "'?", function() {
+					oForm.parResultPage.value = 'MTPredList.htm';
+					submitFormDefined('DeletePredefinedAccount.htm','Confirm');
+				})
+			}
+
+			function Modify(transfer_type) {
+				var oForm = document.forms.sPAForm;
+				oForm.parRadio.value = transfer_type;
+				if( transfer_type == "INT" ) {
+					submitFormDefined('MTFXModifyPredefinedAccount.htm','Choose');
+					return;
+				}
+				submitFormDefined('ModifyPredefinedAccount.htm','Choose');
+			}
+
+			function SetShortcut(sShortcut) {
+				var oForm = document.forms.sPAForm;
+				oForm.parShortCut.value = sShortcut;
+				return false;
+			}
+			
+		</script>
+<style type="text/css">
+			#content #right .box .box_middle .content table tr.showHide{display:none}
+		</style>
+<script type="text/javascript">			
+			function submitFrmCardContractDetails(sPassedCardNum) {
+				document.frmCardContractDetails.PassedCardNum.value=sPassedCardNum;
+				document.frmCardContractDetails.submit();
+			}			
+			function submitFrmCardContractDetailsToDetails(sPassedCardNum) {
+				document.frmCardContractDetails.action="CardContractDetails.htm";
+				document.frmCardContractDetails.PassedCardNum.value=sPassedCardNum;
+				document.frmCardContractDetails.submit();
+			}
+		</script>
+<form method="post" action="https://www.pekao24.pl/MCP/CardOperationHistory.htm" name="frmCardContractDetails">
+<input value="0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w" name="BV_SessionID" type="hidden">
+<input value="1" name="BV_EngineID" type="hidden">
+<input value="" name="PassedCardNum" type="hidden">
+<input type="hidden" name="parRefreshRates" value="1458936635-5"></form>
+<form method="post" action="https://www.pekao24.pl/MCP/MTPredefinedAccount.htm" name="sPAForm">
+<input value="0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w" name="BV_SessionID" type="hidden">
+<input value="1" name="BV_EngineID" type="hidden">
+<input value="/ClientHomePage.htm" name="PAGE_NAME" type="hidden">
+<input value="" name="parShortcut" type="hidden">
+<input value="" name="parShortCut" type="hidden">
+<input value="" name="parRadio" type="hidden">
+<input value="" name="parResultPage" type="hidden">
+<input value="" name="cmdAction" type="hidden">
+<div class="headerTitle">
+<h2 style="width:530px">Moja Strona Główna</h2>
+<div style="width:225px" class="options">
+<a accesskey="d" class="icon_print" title="Drukuj" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">
+<span>Drukuj</span>
+</a>
+<a title="Dostosuj widok" class="icon_personalize_view" href="javascript:mJump(&#39;CustomizeHomePage.htm&#39;,1,&#39;?&#39;)">Dostosuj widok</a>
+</div>
+</div>
+<script type="text/javascript">
+				function submitForm(accountNum) {
+					var oForm = document.forms.CurrAcc1;
+					oForm.PassedAccNum.value=accountNum;
+					oForm.submit();
+				}
+			</script>
+<div id="pnlLoader" style="display: none;">
+<img alt="" src="./afterSuccessfulLogin_files/loader.gif">
+</div>
+<div style="" id="pnlBlocks">
+
+
+
+
+<div class="box sortConst" id="bRecurentLimits" style="display: none;">
+<div class="box_middle box_middleTop noBorderBottom">
+
+<div class="tItemConst collapsibleBox" id="sbRecurentLimits" style="display: none;">
+<div class="top collapsibleTop">
+<h3>Lista aktualnych przelewów cyklicznych</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2">
+<span title="zwiń" class="hide">&nbsp;</span>
+</div>
+<div class="up">
+<span title="przesuń w górę" class="active">&nbsp;</span>
+</div>
+<div class="down">
+<span title="przesuń w dół" class="active">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content collapsibleContent">
+<table cellspacing="0" cellpadding="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak ustanowionych przelewów cyklicznych</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bottom collapsibleBottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div>
+<div id="bDefLimits" class="box sortConst" style="display: none;">
+<div class="box_middle box_middleGrey noBorderBottom">
+
+<div id="sbDefLimits" class="tItemConst collapsibleBox" style="display: none;">
+<div class="top collapsibleTop">
+<h3>Doładowania zdefiniowane</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2">
+<span title="zwiń" class="hide">&nbsp;</span>
+</div>
+<div class="up">
+<span title="przesuń w górę" class="active">&nbsp;</span>
+</div>
+<div class="down">
+<span title="przesuń w dół" class="active">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content collapsibleContent">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak doładowań zdefiniowanych</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bottom collapsibleBottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div>
+<div id="bPredefindedLimits" class="box sortConst" style="display: none;">
+<div class="box_middle box_middleTop noBorderBottom">
+
+<div id="sbPredefindedLimits" class="tItemConst collapsibleBox" style="display: none;">
+<div class="top collapsibleTop">
+<h3>Lista wszystkich zdefiniowanych przelewów</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2">
+<span title="zwiń" class="hide">&nbsp;</span>
+</div>
+<div class="up">
+<span title="przesuń w górę" class="active">&nbsp;</span>
+</div>
+<div class="down">
+<span title="przesuń w dół" class="active">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content collapsibleContent">
+<table class="tablesorter" cellspacing="0" cellpadding="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak przelewów zdefiniowanych</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bottom collapsibleBottom">&nbsp;</div>
+<div class="cl">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+<div class="cl">&nbsp;</div>
+</div>
+<div class="box sortConst" id="bWaitingLimits" style="display: none;">
+<div class="box_middle box_middleTop noBorderBottom">
+
+<div class="tItemConst collapsibleBox" id="sbWaitingLimits" style="display: none;">
+<div class="top collapsibleTop">
+<h3>Zestawienie przelewów do realizacji w bieżącym miesiącu</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2">
+<span title="zwiń" class="hide">&nbsp;</span>
+</div>
+<div class="up">
+<span title="przesuń w górę" class="active">&nbsp;</span>
+</div>
+<div class="down">
+<span title="przesuń w dół" class="active">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content collapsibleContent">
+<table cellspacing="0" cellpadding="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak przelewów oczekujących.</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bottom collapsibleBottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div>
+<div id="bAssetsLiabilities" class="box sortConst" style="display: none;">
+<div class="box_middle box_middleTop noBorderBottom">
+
+<div id="sbAssetsLiabilities" class="tItemConst collapsibleBox" style="display: none;">
+<div class="top collapsibleTop">
+<h3>Bilans aktywów i pasywów</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2">
+<span title="zwiń" class="hide">&nbsp;</span>
+</div>
+<div class="up">
+<span title="przesuń w górę" class="active">&nbsp;</span>
+</div>
+<div class="down">
+<span title="przesuń w dół" class="active">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content collapsibleContent">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td align="right" width="250">
+<p>SUMA AKTYWÓW&nbsp;PLN:
+					</p>
+</td>
+<td width="40">
+<p>&nbsp;</p>
+</td>
+<td align="right">
+<p>123,45&nbsp;PLN&nbsp;
+					</p>
+</td>
+<td align="right" class="slideTDNew" width="280">
+<p>
+<a class="open1" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#" title="Pokaż dodatkowe opcje" rel="PLN">
+<img src="./afterSuccessfulLogin_files/bg_arrow_bottom.gif" alt="Pokaż dodatkowe opcje">
+</a>
+</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="
+					noBorder showHide showHide1_PLN">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td align="right" width="250">
+<p>Rachunki&nbsp;PLN:
+						</p>
+</td>
+<td width="40">
+<p>&nbsp;</p>
+</td>
+<td align="right">
+<p>123,45&nbsp;PLN</p>
+</td>
+<td width="280">
+<p>&nbsp;</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td align="right" width="250">
+<p>
+<strong>BILANS&nbsp;PLN:
+						</strong>
+</p>
+</td>
+<td width="40">
+<p>&nbsp;</p>
+</td>
+<td align="right">
+<p class="colorGreen">
+<strong>123,45&nbsp;PLN&nbsp;
+						</strong>
+</p>
+</td>
+<td width="280">
+<p>&nbsp;</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="noBorder longRow">
+<td>
+				&nbsp;
+				</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="5">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bottom collapsibleBottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div>
+<div id="bAssets" class="box sortable sortConst">
+<div class="box_top">
+<h2>Aktywa</h2>
+<div class="box_top_end">&nbsp;</div>
+<div class="navi">
+<div class="show_hide collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up">
+<span class="" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="box_middle noBorderBottom">
+
+
+
+<div id="sbAccounts" class="tableItem tItemConst">
+<div class="top">
+<h3>Rachunki</h3>
+<div class="navi2">
+<div class="show_hide2 collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content">
+<table cellpadding="0" cellspacing="0">
+<thead>
+<tr>
+<th class="first">
+<p>&nbsp;</p>
+</th>
+<th align="left">
+<p>Rodzaj rachunku / <br>Nazwa własna</p>
+</th>
+<th align="left" width="200">
+<p>Nr rachunku</p>
+</th>
+<th align="right" width="124">
+<p>Saldo</p>
+</th>
+<th width="100">
+<p>&nbsp;</p>
+</th>
+<th class="last">
+<p>&nbsp;</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="whiteRow">
+<td colspan="6">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>
+<a href="javascript:mJumpGet(&#39;CurrentAccountDetails.htm&#39;,0,&#39;?parAccNum=32123123123123123123123123&#39;);" style="font-weight:bold;">EUROKONTO INTRO</a>
+</p>
+</td>
+<td>
+<p style="font-weight:bold;">32 1231 2312 3123 1231 2312 3123</p>
+</td>
+<td align="right">
+<p style="font-weight:bold;">
+<a title="Historia operacji" href="javascript:mJumpGet(&#39;CurrentAccount.htm&#39;,0,&#39;?PassedAccNum=32123123123123123123123123&#39;);">123,45</a>&nbsp;PLN</p>
+</td>
+<td>
+<div class="wrapOperation tooltipMenuPnl">
+<p class="btn">
+<a class="btnWhite arrowDown" href="https://www.pekao24.pl/MCP/ClientLogonWeb2.htm#">
+<span class="tooltipMenuButton">Operacje</span>
+</a>
+</p>
+<div class="frame whiteInfo tooltipMenu">
+<em class="top_l">&nbsp;</em>
+<em class="top_r">&nbsp;</em>
+<div class="text textNoPaddingLR">
+<ul>
+<li>
+<a title="Przelew jednorazowy" href="javascript:mJumpGet(&#39;MTNotPredefinedAccount.htm&#39;,0,&#39;?parOrginalAccount=32123123123123123123123123&#39;);">Przelew jednorazowy</a>
+</li>
+<li>
+<a title="Przelew zdefiniowany" href="javascript:mJumpGet(&#39;MTPredList.htm&#39;,0,&#39;?parOrginalAccount=32123123123123123123123123&#39;);">Przelew zdefiniowany</a>
+</li>
+<li>
+<a title="Otwórz e-Lok@tę" href="javascript:mJump(&#39;NewElokata.htm&#39;,1,&#39;?parPassedAccNum=32123123123123123123123123&amp;&#39;);">Otwórz e-Lok@tę</a>
+</li>
+<li>
+<a title="Złożone przelewy" href="javascript:mJumpGet(&#39;MCPMovementHistory.htm&#39;,0,&#39;?parOrginalAccount=32123123123123123123123123&#39;);">Złożone przelewy</a>
+</li>
+<li>
+<a title="Historia operacji" href="javascript:mJumpGet(&#39;CurrentAccount.htm&#39;,0,&#39;?PassedAccNum=32123123123123123123123123&#39;);">Historia operacji</a>
+</li>
+<li>
+<a title="Wyciągi" href="javascript:mJumpGet(&#39;StatementsForAccounts.htm&#39;,0,&#39;?PassedAccNum=32123123123123123123123123&#39;);">Wyciągi</a>
+</li>
+<li>
+<a title="Szczegóły rachunku" href="javascript:mJumpGet(&#39;CurrentAccountDetails.htm&#39;,0,&#39;?parAccNum=32123123123123123123123123&#39;);">Szczegóły rachunku</a>
+</li>
+</ul>
+<div class="cl">&nbsp;</div>
+</div>
+<em class="bottom_l">&nbsp;</em>
+<em class="bottom_r">&nbsp;</em>
+</div>
+</div>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="6">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table class="paddingTop5 underSum" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="noBorder longRow">
+<td width="28">&nbsp;</td>
+<td align="right" width="435">
+<p class="noMarginTop noPadding">
+<strong>SUMA:</strong>
+</p>
+</td>
+<td align="right" width="145">
+<p class="noMarginTop noPadding">
+<strong>123,45</strong>&nbsp;PLN</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="underTable">
+<a href="javascript:mJumpGet(&#39;AppNewAccount.htm&#39;,1,&#39;?cmdAction=ShowInitialScr&#39;);" class="btnWhite">
+<span>Złóż wniosek o eurokonto walutowe</span>
+</a>
+</div>
+</div>
+<div class="bottom">&nbsp;</div>
+</div><div id="sbDeposits" class="tableItem tItemConst">
+<div class="top">
+<h3>Lokaty</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2 collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="active" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak założonych lokat</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="underTable">
+<a href="javascript:mJump(&#39;NewElokata.htm&#39;,1,&#39;?&#39;);" class="btnWhite" title="Otwórz e-Lok@tę">
+<span>Otwórz e-Lok@tę</span>
+</a>
+<a href="javascript:mJump(&#39;NewTermDeposit.htm&#39;,1,&#39;?&#39;);" class="btnWhite" title="Otwórz lokatę standardową">
+<span>Otwórz lokatę standardową</span>
+</a>
+<a href="javascript:mJumpGet(&#39;NewTermDeposit.htm&#39;,1,&#39;?parDepositType=P&#39;);" class="btnWhite" title="Otwórz lokatę progresywną">
+<span>Otwórz lokatę progresywną</span>
+</a>
+</div>
+</div>
+<div class="bottom">&nbsp;</div>
+</div><div id="sbFunds" class="tableItem tItemConst">
+<div class="top">
+<h3>Fundusze inwestycyjne</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2 collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="active" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak wybranych funduszy inwestycyjnych&nbsp;</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="underTable">
+<a href="javascript:mJump(&#39;FirstPurchaseMFSP_P24.htm&#39;,1,&#39;?&#39;);" class="btnWhite" title="Złóż zlecenie nabycia J.u.">
+<span>Złóż zlecenie nabycia J.u.</span>
+</a>
+</div>
+</div>
+<div class="bottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div><div id="bCredits" class="box sortable sortConst">
+<div class="box_top">
+<h2>Kredyty i karty</h2>
+<div class="box_top_end">&nbsp;</div>
+<div class="navi">
+<div class="show_hide collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up">
+<span class="active" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="box_middle noBorderBottom">
+
+
+<div id="sbCreditAccounts" class="tableItem tItemConst">
+<div class="top">
+<h3>Karty</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2 collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Nie posiadasz kart.</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="underTable">
+<a href="javascript:mJumpGet(&#39;AppCredCard.htm&#39;,1,&#39;?cmdAction=ShowInitialScr&#39;);" class="btnWhite">
+<span>Złóż Wniosek o kartę kredytową</span>
+</a>
+</div>
+</div>
+<div class="bottom">&nbsp;</div>
+</div><div id="sbCredits" class="tableItem tItemConst">
+<div class="top">
+<h3>Kredyty</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2 collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="active" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content">
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Brak ustanowionych kredytów</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="underTable">
+<a href="javascript:mJumpGet(&#39;PromotionForm.htm&#39;,1,&#39;?type=1&#39;);" class="btnWhite">
+<span>Zapytaj o kredyt mieszkaniowy</span>
+</a>
+<a href="javascript:mJumpGet(&#39;AppOverdraft.htm&#39;,1,&#39;?cmdAction=ShowInitialScr&#39;);" class="btnWhite">
+<span>Złoż wniosek o pożyczkę w eurokoncie</span>
+</a>
+</div>
+</div>
+<div class="bottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div><div id="bMakler" class="box sortable sortConst">
+<div class="box_top">
+<h2>Usługi maklerskie</h2>
+<div class="box_top_end">&nbsp;</div>
+<div class="navi">
+<div class="show_hide collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up">
+<span class="active" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="box_middle noBorderBottom">
+
+
+<div id="sbMakler1" class="tableItem tItemConst">
+<div class="top">
+<a href="javascript:mJump(&#39;MAKAccountSelection.htm&#39;,0, &#39;?ms=Y&#39;)" onmousemove="window.status=&#39;&#39;;" title="Zobacz listę rachunków brokerskich" class="moreLeft floatLeft">Lista rachunków inwestycyjnych w DM Pekao</a>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2 collapsibleArrow">
+<span class="hide" title="zwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="active" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="underTable underTableNoBorder">
+<a href="javascript:mJumpGet(&#39;MAKAccountSelection.htm&#39;,1,&#39;?cmdAction=OpenAccount&#39;);" class="btnWhite">
+<span>ZŁÓŻ WNIOSEK O NOWY RACHUNEK INWESTYCYJNY W DOMU MAKLERSKIM PEKAO</span>
+</a>
+</div>
+</div>
+<div class="bottom">&nbsp;</div>
+</div><div id="sbMakler2" class="tableItem tItemConst">
+<div class="top topClose">
+<a class="moreLeft floatLeft" href="javascript:submitPost(&#39;https://www.pekao24.pl/MCP/MAKCDMLogonWeb.htm&#39;,{});" title="Przejdź do Centralnego Domu Maklerskiego PEKAO S.A.">Przejdź do Centralnego Domu Maklerskiego PEKAO S.A.</a>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2 collapsibleArrow">
+<span class="show" title="rozwiń">&nbsp;</span>
+</div>
+<div class="up2">
+<span class="active" title="przesuń w górę">&nbsp;</span>
+</div>
+<div class="down2">
+<span class="" title="przesuń w dół">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content" style="display: none;">
+<div class="underTable underTableNoBorder">
+<p>Klienci zainteresowani korzystaniem z usług maklerskich za pośrednictwem Centralnego Domu Maklerskiego Pekao S.A. muszą posiadać podpisaną Umowę świadczenia usług maklerskich przez Centralny Dom Maklerski Pekao S.A.</p>
+</div>
+</div>
+<div class="bottom" style="display: none;">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div><div class="box sortable sortConst" id="bLimits">
+<div class="box_middle box_middleGrey noBorderBottom">
+
+<div id="sbLimits" class="tableItem tItemConst collapsibleBox">
+<div class="top collapsibleTop">
+<h3>Limity transakcyjne</h3>
+<div class="navi2 navi_delete">
+<div class="delete">
+<span title="Usuń">&nbsp;</span>
+</div>
+<div class="show_hide2">
+<span title="zwiń" class="hide">&nbsp;</span>
+</div>
+<div class="up">
+<span title="przesuń w górę" class="active">&nbsp;</span>
+</div>
+<div class="down">
+<span title="przesuń w dół" class="active">&nbsp;</span>
+</div>
+</div>
+</div>
+<div class="content collapsibleContent">
+<table cellpadding="0" cellspacing="0" class="tableTextRight">
+<thead>
+<tr class="header">
+<th class="first">
+<p>&nbsp;</p>
+</th>
+<th align="left">
+<p>Rodzaj limitu</p>
+</th>
+<th width="132" align="right">
+<p>Wysokość</p>
+</th>
+<th width="132" align="right">
+<p>Dostępny limit</p>
+</th>
+<th width="156" align="right">
+<p style="padding-left:17px; padding-right:0;" class="floatLeft">Przelewy oczekujące</p>
+<span class="questionMark" style="float:left;">
+<a href="javascript:void(0)">[?]</a>
+</span>
+<div class="tooltipContent"><strong>Przelewy oczekujące</strong><br>Zestawienie zawiera wykaz przelewów cyklicznych oraz z przyszłą datą realizacji, które obciążą limity transakcyjne - dzienny i miesięczny - w danym miesiącu kalendarzowym.</div>
+</th>
+<th width="136">
+<p>&nbsp;</p>
+</th>
+<th class="last">
+<p>&nbsp;</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="whiteRow">
+<td colspan="7">&nbsp;</td>
+</tr>
+<tr>
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>
+<p>Limit dzienny<span class="questionMark">
+<a href="javascript:void(0)">[?]</a>
+</span>
+</p><div class="tooltipContent"><strong>Limit dzienny</strong><br>To maksymalna kwota przelewów w serwisach Pekao24 w ciągu jednego dnia, która dotyczy przelewów oraz doładowań jednorazowych.<br>Limit dzienny nie dotyczy przelewów i doładowań zdefiniowanych i cyklicznych oraz przelewów na rachunki własne prowadzone w Banku Pekao SA, wykonanych za pomocą funkcji "Przelew pomiędzy rachunkami własnymi w Pekao". Przelewy z datą przyszłą obciążają limit w dniu ich wykonania.</div>
+<p></p>
+</td>
+<td align="right">
+<p>
+<strong>1.000,00&nbsp;</strong>PLN</p>
+</td>
+<td align="right">
+<p>
+<strong>1.000,00&nbsp;</strong>PLN</p>
+</td>
+<td align="right">
+<p>
+<strong>0,00&nbsp;</strong>PLN
+											</p>
+</td>
+<td>
+<p>
+<a href="javascript:mJump(&#39;DailyLimitChange.htm&#39;,1)" class="more">Zmień limit</a>&nbsp;
+										</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="noBorder">
+<td class="first">
+<span class="topLeftcorner">&nbsp;</span>
+</td>
+<td>Limit miesięczny<span class="questionMark">
+<a href="javascript:void(0)">[?]</a>
+</span>
+<div class="tooltipContent"><strong>Limit miesięczny</strong><br>To maksymalna kwota przelewów w serwisach Pekao24 w ciągu miesiąca kalendarzowego,<br>która dotyczy przelewów oraz doładowań jednorazowych, zdefiniowanych i cyklicznych.<br>Limit miesięczny nie dotyczy przelewów na rachunki własne prowadzone w Banku Pekao SA, wykonanych za pomocą funkcji "Przelew pomiędzy rachunkami własnymi w Pekao". Przelewy z datą przyszłą oraz cykliczne obciążają limit w dniu ich wykonania.</div>
+</td>
+<td align="right">
+<p>
+<strong>5.000,00&nbsp;</strong>PLN</p>
+</td>
+<td align="right">
+<p>
+<strong>5.000,00&nbsp;</strong>PLN</p>
+</td>
+<td align="right">
+<p>
+<strong>0,00</strong>&nbsp;PLN
+												</p>
+</td>
+<td>
+<p>
+<a href="javascript:mJump(&#39;MonthlyLimitChangePI.htm&#39;,1)" class="more">Zmień limit</a>&nbsp;
+										</p>
+</td>
+<td class="last">
+<span class="topRightcorner">&nbsp;</span>
+</td>
+</tr>
+<tr class="whiteRow">
+<td colspan="7">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bottom collapsibleBottom">&nbsp;</div>
+</div></div>
+<div class="box_bottom">&nbsp;</div>
+</div></div>
+</form>
+</div>
+<div class="registerInfo">
+<div class="floatLeft marginRight5">Nr klienta:
+<span>123123123</span>
+<span class="pipe">|</span>
+<a style="color:#87898C;" href="javascript:mJump(&#39;EventRegisterViewer.htm&#39;,1,&#39;?cmdAction=SearchEvents&amp;rgSearchType=1&amp;sEventType=1&amp;sOperationType=6&amp;&#39;);">
+							
+							&nbsp;Ostatnie nieudane logowanie:&nbsp;25/03/2016 21:17</a>
+<a class="more moreInline" href="javascript:mJump(&#39;EventRegisterViewer.htm&#39;,1,&#39;?cmdAction=SearchEvents&amp;rgSearchType=1&amp;sEventType=1&amp;sOperationType=6&amp;&#39;)">Zobacz rejestr zdarzeń</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<form name="frmLanguage" method="post" action="https://www.pekao24.pl/MCP/ClientHomePage.htm">
+<input value="0001m-Z502MVyQ-ox-Ky7sbfWLI:ap04_24_w" name="BV_SessionID" type="hidden">
+<input value="1" name="BV_EngineID" type="hidden">
+<input value="" name="parLanguage" type="hidden">
+<input value="Ts[dws" name="parSyncToken" type="hidden">
+<input value="PINVerification_WE.1.0" name="parPI" type="hidden">
+<input value="{&quot;functions&quot;:{&quot;names&quot;:[&quot;$&quot;,&quot;add&quot;,&quot;blackberrylocationcollector&quot;,&quot;contacttabclick&quot;,&quot;delete&quot;,&quot;dictionary&quot;,&quot;domdatacollection&quot;,&quot;fingerprint&quot;,&quot;html5locationcollector&quot;,&quot;hashtable&quot;,&quot;helpaccordion&quot;,&quot;hideerror&quot;,&quot;ie_fingerprint&quot;,&quot;inithelpaccordion&quot;,&quot;initscreenkeyboard&quot;,&quot;interactionelement&quot;,&quot;lookup&quot;,&quot;mozilla_fingerprint&quot;,&quot;onclientclose&quot;,&quot;onclientshow&quot;,&quot;opera_fingerprint&quot;,&quot;screenkeyboardlogin&quot;,&quot;showerror&quot;,&quot;timer&quot;,&quot;uielementlist&quot;,&quot;uievent&quot;,&quot;activexdetect&quot;,&quot;addeventlistener&quot;,&quot;add_deviceprint&quot;,&quot;alert&quot;,&quot;allowedkey&quot;,&quot;atob&quot;,&quot;blur&quot;,&quot;btoa&quot;,&quot;callpopup&quot;,&quot;cancelanimationframe&quot;],&quot;excluded&quot;:{&quot;size&quot;:0,&quot;count&quot;:0},&quot;truncated&quot;:true},&quot;inputs&quot;:[&quot;bv_engineid&quot;,&quot;bv_engineid&quot;,&quot;bv_sessionid&quot;,&quot;bv_sessionid&quot;,&quot;no_name&quot;,&quot;f0&quot;,&quot;f1&quot;,&quot;f10&quot;,&quot;f11&quot;,&quot;f12&quot;,&quot;f13&quot;,&quot;f14&quot;,&quot;f15&quot;,&quot;f2&quot;,&quot;f3&quot;,&quot;f4&quot;,&quot;f5&quot;,&quot;f6&quot;,&quot;f7&quot;,&quot;f8&quot;,&quot;f9&quot;,&quot;fsubmit&quot;,&quot;parbrowsername&quot;,&quot;parde&quot;,&quot;pardp&quot;,&quot;parlanguage&quot;,&quot;parpi&quot;,&quot;parpassword&quot;,&quot;parsynctoken&quot;,&quot;parsynctoken&quot;,&quot;parusername&quot;,&quot;parusername&quot;],&quot;iframes&quot;:[],&quot;scripts&quot;:[6,6,6,6,6,6,6,6,6,6,6,3007,6,6,505,933,177,151,6,6],&quot;collection_status&quot;:0}" name="parDE" type="hidden">
+<input value="1458936635-5" name="parRefreshRates" type="hidden">
+<input value="version=3.4.1.0_1&amp;pm_fpua=mozilla/5.0 (windows nt 10.0; wow64) applewebkit/537.36 (khtml, like gecko) chrome/49.0.2623.87 safari/537.36|5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36|Win32&amp;pm_fpsc=24|1366|768|728&amp;pm_fpsw=&amp;pm_fptz=1&amp;pm_fpln=lang=pl|syslang=|userlang=&amp;pm_fpjv=0&amp;pm_fpco=1&amp;pm_fpasw=widevinecdmadapter|pepflashplayer|mhjfbmdgcfjbbpaeojofohoefgiehjai|internal-nacl-plugin|internal-pdf-viewer&amp;pm_fpan=Netscape&amp;pm_fpacn=Mozilla&amp;pm_fpol=true&amp;pm_fposp=&amp;pm_fpup=&amp;pm_fpsaw=1366&amp;pm_fpspd=24&amp;pm_fpsbd=&amp;pm_fpsdx=&amp;pm_fpsdy=&amp;pm_fpslx=&amp;pm_fpsly=&amp;pm_fpsfse=&amp;pm_fpsui=&amp;pm_os=Windows&amp;pm_brmjv=49&amp;pm_br=Chrome&amp;pm_inpt=&amp;pm_expt=" name="parDP" type="hidden">
+<input value="123123123" name="parUsername" type="hidden">
+<input value="Y" name="afterLogon" type="hidden">
+</form>
+<script type="text/javascript">
+            function setLanguage() {
+            var oForm = document.forms.frmLanguage;
+            oForm.parLanguage.value = "UK";
+            oForm.submit();
+            }
+        </script>
+<div id="footer">
+<div style="width:100px;" class="box boxVerisign noMarginLeft">
+<a href="http://www.pekao.com.pl/" class="ext">
+<img src="./afterSuccessfulLogin_files/aurochs.gif">
+</a>
+</div>
+<div class="box boxVerisign">
+<p class="title pekao24Mobile">
+<strong>TelePekao</strong>
+</p>
+<p>800 380 380<br>+48 42 683 83 80</p>
+</div>
+<div class="box small_margin long180">
+<p title="TelePekao" class="title pekaoSms">
+<strong>Serwis mobilny</strong>
+</p>
+<p>
+<a class="more ext floatLeft" href="http://impekao24.pl/">aplikacja mobilna&nbsp;</a>
+</p><div class="cl">&nbsp;</div>
+<p></p>
+<p>
+<a class="more ext floatLeft" href="http://m.pekao24.pl/">m.pekao24.pl</a>
+</p><div class="cl">&nbsp;</div>
+<p></p>
+</div>
+<div class="box small_margin long160">
+<p class="title pekao24Mobile">
+<strong>Infolinia</strong>
+</p>
+<p>801 365 365<br>+48 42 683 82 32</p>
+</div>
+<div class="box small_margin long180">
+<p class="title pekaoSms marginBottom10">
+<strong>PekaoSMS</strong> 3800</p>
+<p class="title email">
+<strong>E-mail</strong>
+<a accesskey="9" href="mailto:pekao24@pekao.com.pl">pekao24@pekao.com.pl</a>
+</p>
+</div>
+<div class="footer_down">
+<address>Copyright © 2002-2014&nbsp;
+                    <a accesskey="1" title="Bank Pekao S.A." class="ext" href="http://www.pekao.com.pl/">Bank Pekao S.A.</a>
+</address>
+<ul>
+<li>
+<a href="https://www.pekao24.pl/MCP/html/PL/Fees.html?height=600&amp;width=800&amp;modal=true" class="thickbox">Opłaty</a>
+</li>
+<li>
+<a href="https://www.pekao24.pl/MCP/html/PL/CutOffTime.html?height=600&amp;width=800&amp;modal=true" class="thickbox">Godziny graniczne</a>
+</li>
+<li>
+<a title="Notowania GPW" href="javascript:MM_openBrWindow(&#39;RedirectToNGPW.htm&#39;,%20&#39;Notowania&#39;,%20&#39;toolbar=yes,location=yes,menubar=yes,status=yes,scrollbars=yes,resizable=yes,width=600,height=480&#39;)">Notowania GPW</a>
+</li>
+<li>
+<a class="ext" title="Kursy walut" href="http://www.pekao.com.pl/exchange">Kursy walut</a>
+</li>
+<li>
+<a accesskey="3" title="Mapa serwisu" href="javascript:mJump(&#39;SiteMapNew.htm&#39;,0,&#39;?&#39;);">Mapa serwisu</a>
+</li>
+<li>
+<a accesskey="6" title="Pomoc" href="javascript:mJump(&#39;Help.htm&#39;,1,&#39;?&#39;);">Pomoc</a>
+</li>
+<li>
+<a accesskey="9" title="Kontakt" href="javascript:mJump(&#39;PromotionForm.htm&#39;,1,&#39;?&#39;)">Kontakt</a>
+</li>
+</ul>
+</div>
+</div>
+
+
+</body></html>
